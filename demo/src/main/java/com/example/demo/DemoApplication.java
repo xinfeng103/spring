@@ -37,9 +37,9 @@ public class DemoApplication implements CommandLineRunner {
         connection.close();
     }
 
-    private void showData(){
-        jdbcTemplate.queryForList("select * from FOO where ID =1")
-                .forEach(row->log.info(row.toString()));
+    private void showData() {
+        jdbcTemplate.queryForList("SELECT * FROM FOO")
+                .forEach(row -> log.info(row.toString()));
     }
 }
 
