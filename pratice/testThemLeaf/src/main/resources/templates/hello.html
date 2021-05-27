@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Thymeleaf快速入门-Hello Thymeleaf</title>
+    <script th:inline="javascript">
+        var single = [[${student}]];
+        console.log(single.name + "/" + single.id);
+    </script>
+</head>
+<body>
+</body>
+</html>

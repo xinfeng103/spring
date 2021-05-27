@@ -26,14 +26,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          * 如果不知道加密方式 There is no PasswordEncoder mapped for the id "null"
          * 这里使用 bcrypt
          */
+
         auth.inMemoryAuthentication()
                 .passwordEncoder(new BCryptPasswordEncoder())
-                .withUser("jin")
-                .password(new BCryptPasswordEncoder().encode("champool"))
+                .withUser("lee")
+                .password(new BCryptPasswordEncoder().encode("123"))
                 .roles("USER")
                 .and()
-                .withUser("spike")
-                .password(new BCryptPasswordEncoder().encode("spacecowboy"))
+                .withUser("sliang")
+                .password(new BCryptPasswordEncoder().encode("123"))
                 .roles("USER");
     }
 }
